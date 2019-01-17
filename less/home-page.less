@@ -1,5 +1,7 @@
 .home {
 
+  padding: 0 10px;
+
   header {
     width: 100%;
     display: flex;
@@ -9,8 +11,19 @@
     border-bottom: 2px dashed @navigation-border;
     padding: 30px 0;
 
+    @media @mobile {
+      flex-flow: column nowrap;
+      text-align: center;
+    }
+
     h1 {
         font-size: 40px;
+
+        @media @mobile {
+          width: 100%;
+          text-align: center;
+          margin-bottom: 20px;
+        }
     }
   }
 
@@ -31,6 +44,10 @@
     .text-content {
       width: 48%;
       padding-right: 1%;
+
+      @media @mobile {
+        width: 100%;
+      }
     }
 
     .img-content {
@@ -40,12 +57,21 @@
       img {
         border-radius: 10px;
       }
+
+      @media @mobile {
+        width: 100%;
+      }
     }
   }
 
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+
+    @media @mobile {
+      display: flex;
+      flex-flow: column-reverse nowrap;
+    }
 
     .text-content {
       padding-left: 1%;
@@ -62,6 +88,10 @@
     width: 75%;
     margin: 0 auto 30px;
 
+    @media @mobile {
+      width: 100%;
+    }
+
     img {
       border-radius: 10px;
     }
@@ -73,14 +103,27 @@
     display: flex;
     justify-content: space-between;
 
+    @media @mobile {
+      flex-flow: column nowrap;
+    }
+
     .destination {
       width: 30%;
       margin-bottom: 30px;
+
+      @media @mobile {
+        width: 100%;
+        padding: 0 40px;
+      }
     }
 
     .btn {
       width: 80%;
-      .sign-up-buttons(teal, white, 18px, bold)
+      .sign-up-buttons(teal, white, 18px, bold);
+
+      @media @mobile {
+        width: 100%;
+      }
     }
   }
 }// home
